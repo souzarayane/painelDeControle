@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    background-color: #faf9fc;
+}
+
+.clear{
+    clear: both;
+}
+
+/*Div Sidebar*/
+.sidebar{
+    height: 100%;
+    background: #2d3035;
+    width: 300px;
+    float: left;
+}
+
+.topo{
+    background: #262820;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.topo h3{
+    color: #fff;
+    font-weight: 300;
+}
+
+.menu{
+    padding: 30px;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #717171;
+}
+
+.menu ul li:hover i{
+    color: orangered;
+    transition: 0.6s;
+}
+
+.menu ul li a{
+    color: #717171;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu ul li a:hover{
+    color: #fff;
+    transition: 0.6s;
+}
+/*Main-Content*/
+.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+header{
+    background: #fff;
+    padding: 20px 15px;
+    border-bottom: 2px solid #ccc;
+    height: 90px;
+}
+
+.icons-pesquisa{
+    background: #d6d6d6;
+    padding: 7px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    top: -1;
+}
+
+.icons-pesquisa i{
+    color: #fff;
+}
+
+.pesquisa-campo{
+    float: right;
+}
+
+.pesquisa-campo form{
+    display: inline-block;
+}
+
+.pesquisa-campo input[type=text]{
+    width: 200px;
+    height: 30px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 0;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.pesquisa-campo input[type=text]:focus{
+    outline: 0;
+}
+
+/*Div icone-alerta*/
+.icone-alerta{
+    float: right;
+    background: #fbedef;
+    margin-right: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.icone-alerta p{
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    display: inline-block;
+    background: #ed7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.icone-alerta i{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/*Div nome usuário*/
+.nome-usuario{
+    float: left;
+}
+
+.nome-usuario h2{
+    font-weight: normal;
+    font-size: 23px;
+    color: #a7a7a7;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+/*Div content1*/
+.content1{
+    float: left;
+    width: 70%;
+    padding: 30px;
+    overflow-y: auto;
+    height: calc(100% - 90px);
+}
+
+.panel{
+    width: 100%;
+    float: left;
+    border: 2px solid #ebebeb;
+    background: white;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.panel h2{
+    color: #717171;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.panel p{
+    font-size: 14px;
+    color: #b2b2b2;
+    margin-top: 10px;
+}
+
+.ultimas-atividades{
+    width: 30%;
+    height: calc(100% - 90px);
+    background: #eaeaea;
+    padding: 20px 40px;
+    float: left;
+    overflow-y: auto;
+}
+
+.atividades-topo h2{
+    color: #7f7f7f;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.circle-atividade{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #ccc;
+}
+
+.atividade-registro{
+    position: relative;
+    padding: 15px 10px;
+    border-left: 1px solid #bbb;
+}
+
+.atividade-registro h2{
+    color: #bbb;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.atividade-registro p{
+    color: #b2b2b2;
+    font-size: 15px;
+}
+
+/*Design Responsivo*/
+@media screen and (max-width: 768px){
+    .ultimas-atividades{
+        display: none;
+    }
+
+    .content1{
+        width: 100%;
+    }
+
+    .panel{
+        width: 100% !important;
+    }
+
+    .sidebar{
+        display: none;
+        position: relative;
+        z-index: 999;
+    }
+
+    .main-content{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
